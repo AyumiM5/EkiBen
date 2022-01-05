@@ -1,0 +1,12 @@
+h1 ユーザー情報編集
+= form_with model:@user, local: true do |f|
+  div 
+    = f.label :name
+    = f.text_field :name, autofocus: true, autocomplete: "name"
+  div
+    = f.label :email
+    = f.text_field :email, autocomplete: "email"
+  div
+    = f.attachment_field :profile_image, placeholder: "プロフィール画像"
+  div
+    = f.submit "変更を保存"

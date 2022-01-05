@@ -7,6 +7,12 @@ span 会員登録すると投稿が出来るようになります
     br
     = f.email_field :email, autofocus: true, autocomplete: "email"
   .field
+    = f.label :name
+    em
+      | (10文字以内で登録して下さい)
+    br
+    = f.email_field :name, autocomplete: "name"
+  .field
     = f.label :password
     - if @minimum_password_length
       em
