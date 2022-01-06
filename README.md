@@ -1,24 +1,6 @@
-# README
+# エキベン
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## アプリケーション概要
+"駅"と"駅弁"を投稿しシェア出来るアプリケーションです！　
+秘境駅、最北端の駅、海の見える駅等、駅そのものの投稿をしてもOK　
+または、駅弁に着目して様々な駅弁を投稿してもOKです。
