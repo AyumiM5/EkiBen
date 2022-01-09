@@ -4,3 +4,8 @@ div
   span ユーザー名:
   = @user.name
 = link_to "ユーザー情報編集", edit_user_path(current_user.id)
+div
+  p 投稿
+  - @posts.each do |post|
+    = post.body
+    = link_to "編集", edit_post_path(post)
