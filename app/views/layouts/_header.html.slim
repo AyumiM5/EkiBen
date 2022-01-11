@@ -1,18 +1,24 @@
--if user_signed_in?
-  li
-    = link_to "マイページ", user_path(current_user.id)
-  li
-    = link_to "投稿", new_post_path
-  li
-    = link_to "タイムライン", posts_path
-  li
-    = link_to "ログアウト", destroy_user_session_path, method: :delete
--else
-  li
-    = link_to "トップ", root_path
-  li
-    = link_to "タイムライン", posts_path
-  li
-    = link_to "新規登録", new_user_registration_path
-  li
-    = link_to "ログイン", new_user_session_path
+.shadow-sm
+  nav.navbar.navbar-expand-lg.navbar-light
+    .container
+      button.navbar-toggler data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        i.fas.fa-bars
+      -if user_signed_in?
+        li
+          = link_to "マイページ", user_path(current_user.id)
+        li
+          = link_to "投稿", new_post_path
+        li
+          = link_to "タイムライン", posts_path
+        li
+          = link_to "ログアウト", destroy_user_session_path, method: :delete
+      -else
+        li
+          = link_to "トップ", root_path
+        li
+          = link_to "タイムライン", posts_path
+        li
+          = link_to "新規登録", new_user_registration_path
+        li
+          = link_to "ログイン", new_user_session_path
