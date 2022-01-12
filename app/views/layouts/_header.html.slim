@@ -4,21 +4,22 @@
       button.navbar-toggler data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"
         | Menu
       .collapse.navbar-collapse.justify-content-center id="navbarNavDropdown"
+        ul.navbar-nav.ml-auto.text-right
         -if user_signed_in?
-          li
+          li.nav-item
             = link_to "マイページ", user_path(current_user.id)
-          li
+          li.nav-item
             = link_to "投稿", new_post_path
-          li
+          li.nav-item
             = link_to "タイムライン", posts_path
-          li
+          li.nav-item
             = link_to "ログアウト", destroy_user_session_path, method: :delete
         -else
-          li
+          li.nav-item
             = link_to "トップ", root_path
-          li
+          li.nav-item
             = link_to "タイムライン", posts_path
-          li
+          li.nav-item
             = link_to "新規登録", new_user_registration_path
-          li
+          li.nav-item
             = link_to "ログイン", new_user_session_path
