@@ -8,11 +8,21 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
+    @photo = @post.photos.build
   end
   
   def create
     @post = current_user.posts.new(post_params)
-    @post.save
+    if @post.save
+      if params[:photos].present?
+        params[:photos][:image].each do |a|
+          @photo = @post.photos.create!(post_id: @post.id)
+        end
+      end
+      redirect_to posts_path
+    else
+      render 'new'
+    end
     redirect_to user_path(current_user)
   end
 
@@ -29,6 +39,6 @@ class PostsController < ApplicationController
   private
   
   def post_params
-    params.require(:post).permit(:body)
+    params.require(:post).permit(:body, photos_attributes: [:image])
   end
 end
