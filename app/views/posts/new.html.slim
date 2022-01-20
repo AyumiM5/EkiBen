@@ -5,5 +5,5 @@ p 投稿フォーム
   .input-box__bottom
     .input-box__bottom__files
       = f.fields_for :photos do |i|
-        = i.attachment_field :image, multiple: true, name: "photos[file][]"
+        = i.attachment_field :image, multiple: true, name: "photos[image][]"
   = f.submit "投稿"

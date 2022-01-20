@@ -19,11 +19,10 @@ class PostsController < ApplicationController
           @photo = @post.photos.create!(post_id: @post.id)
         end
       end
-      redirect_to posts_path
+      redirect_to user_path(current_user)
     else
       render 'new'
     end
-    redirect_to user_path(current_user)
   end
 
   def edit
