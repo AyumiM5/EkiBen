@@ -14,11 +14,6 @@ class PostsController < ApplicationController
   def create
     @post = current_user.posts.new(post_params)
     if @post.save
-      if params[:photos].present?
-        params[:photos][:image].each do |a|
-          @photo = @post.photos.create!(post_id: @post.id)
-        end
-      end
       redirect_to user_path(current_user)
     else
       render 'new'
