@@ -1,5 +1,6 @@
 p タイムライン
 - @posts.each do |post|
-  = post.body
-  br
-  = post.user.name
+  div
+    = link_to "#{post.body}", post_path(post.id)
+    br
+    = post.user.name
