@@ -16,3 +16,19 @@
   @import "bootstrap";
   @import 'font-awesome-sprockets';
   @import 'font-awesome';
+  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav-item {
+  list-style: none;
+  padding : 10px;
+  }
