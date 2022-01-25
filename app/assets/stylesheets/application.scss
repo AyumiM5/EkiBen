@@ -28,7 +28,17 @@ a {
   text-decoration: none;
 }
 
+.link {
+  text-decoration: none;
+  color: white ; 
+}
+
 .nav-item {
   list-style: none;
   padding : 10px;
-  }
+  text-decoration: none;
+}
+
+.navbar {
+  background-color: #6A7575;
+}
