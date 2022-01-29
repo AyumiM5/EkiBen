@@ -1,0 +1,27 @@
+.container
+  .row
+    .col-6.footer-top
+      p
+        | エキ 
+        i.fas.fa-subway
+        |  ベン
+    .col-6.footer-menu
+      ul.list-unstyled.p-0
+        -if user_signed_in?
+          li
+            = link_to "マイページ", user_path(current_user.id), {class: "link"}
+          li
+            = link_to "投稿", new_post_path, {class: "link"}
+          li
+            = link_to "タイムライン", posts_path, {class: "link"}
+          li
+            = link_to "ログアウト", destroy_user_session_path, method: :delete
+        -else
+          li
+            = link_to "トップ", root_path, {class: "link"}
+          li
+            = link_to "タイムライン", posts_path, {class: "link"}
+          li
+            = link_to "新規登録", new_user_registration_path, {class: "link"}
+          li
+            = link_to "ログイン", new_user_session_path, {class: "link"}
