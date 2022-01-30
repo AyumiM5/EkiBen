@@ -1,12 +1,10 @@
 div.time-line.container.mt-3
   - @posts.each do |post|
-    .row
-      .col-1
-       .profile-img-container 
+    .post
+      .row.post-user
+        .profile-img-container 
           = attachment_image_tag post.user, :profile_image, fallback: "no_image.jpg"
-      .col-11
-        = post.user.name
-    div
-      = link_to "#{post.body}", post_path(post.id)
-      br
-      = post.user.name
+        .name
+          = post.user.name
+      div
+        = link_to "#{post.body}", post_path(post.id)
