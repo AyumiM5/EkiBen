@@ -28,10 +28,13 @@ a {
   text-decoration: none;
 }
 
+main {
+  min-height : 600px;
+}
+
 .link {
   text-decoration: none;
   color: white ;
-  padding: 0 5px;
 }
 
 .nav-item {
@@ -80,8 +83,10 @@ footer {
 .footer-top {
   line-height: 100px;
   color: white;
+  font-size: 20px;
 }
 
 .footer-menu {
-  padding-top: 10px;
+  padding-top: 12px;
+  opacity: 0.8;
 }
