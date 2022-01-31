@@ -1,17 +1,14 @@
-h2 ログイン
-span ログインすると投稿出来るようになります
-= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-  .field
-    = f.label :email
-    br
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    br
-    = f.password_field :password, autocomplete: "current-password"
-  - if devise_mapping.rememberable?
-    .field
-      = f.check_box :remember_me
-      = f.label :remember_me
-  .actions
-    = f.submit "ログイン"
+.login
+  p.login-title ログイン
+  p.login-content ログインすると投稿出来るようになります
+  = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+    .field.email-form
+      = f.label :email
+      br
+      = f.email_field :email, autofocus: true, autocomplete: "email"
+    .field.password-form
+      = f.label :password
+      br
+      = f.password_field :password, autocomplete: "current-password"
+    .actions
+      = f.submit "ログイン"
