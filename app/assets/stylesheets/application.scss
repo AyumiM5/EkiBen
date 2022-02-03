@@ -55,20 +55,20 @@ main {
   background-position: top 25% center;
 }
 
-.login {
+.login, .sign-in {
   width: 100%;
   height: 600px;
   display: flex;
   justify-content: center;
 }
 
-.login-visual {
+.login-visual, .sign-in-visual {
   width: 50%;
   height: 600px;
   background-color: red;
 }
 
-.login-form {
+.login-form, .sign-in-form {
   text-align: center;
   padding-top: 100px;
   margin: auto;
@@ -84,8 +84,8 @@ main {
   font-size : 15px;
 }
 
-.email-form, .password-form{
-  margin : 30px 0;
+.email-form, .password-form, .name-form{
+  margin : 20px 0;
 }
 
 .main-content {
