@@ -71,16 +71,16 @@ main {
 .login-form, .sign-in-form {
   text-align: center;
   padding-top: 100px;
-  margin: auto;
+  margin: 0 auto;
   width: 50%;
-  height: 600px;
+  height: 500px;
 }
 
-.login-title {
+.login-title, .sign-in-title {
   font-size : 20px;
 }
 
-.login-content{
+.login-content,.sign-in-content{
   font-size : 15px;
 }
 
